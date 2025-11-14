@@ -1,0 +1,80 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+/* --- Blocs de code et bouton Copier --- */
+.code-block-wrapper {
+    position: relative;
+}
+
+.code-block {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.875rem;
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    white-space: pre;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background-color: #4a5568;
+    color: white;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.2s;
+}
+
+.copy-btn:hover {
+    background-color: #2d3748;
+}
+
+/* --- Bouton et Contenu de la Solution --- */
+.solution-toggle {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: background-color 0.2s;
+    border: none; /* Assure que le bouton n'a pas de bordure par défaut */
+}
+
+.solution-toggle:hover {
+    background-color: #1d4ed8;
+}
+
+/* RÈGLE CRUCIALE : Cache la solution par défaut */
+.solution-content {
+    display: none;
+    margin-top: 1rem;
+    border-left: 4px solid #10b981;
+    padding-left: 1rem;
+}
+
+/* --- Coloration Syntaxique Python --- */
+.py-keyword { color: #c586c0; font-weight: bold; }
+.py-function { color: #dcdcaa; }
+.py-string { color: #ce9178; }
+.py-comment { color: #6a9955; }
+.py-number { color: #b5cea8; }
+.py-builtin { color: #569cd6; } /* self, print, etc. */
+.py-decorator { color: #9cdcfe; } /* @classmethod */
+.py-operator { color: #d4d4d4; }
+.py-variable { color: #9cdcfe; }
