@@ -9,6 +9,10 @@
     <p class="text-xl text-gray-600 mb-8 leading-relaxed">
         Jusqu'à présent, vous avez probablement programmé de manière <strong>procédurale</strong> : une suite d'instructions et de fonctions qui manipulent des données. Cette approche fonctionne bien pour des scripts simples, mais devient difficile à maintenir lorsque les programmes grandissent. La Programmation Orientée Objet (POO) propose une nouvelle façon de penser : au lieu de séparer les données des fonctions qui les traitent, on les regroupe dans des entités logiques appelées <strong>objets</strong>.
     </p>
+
+     <div class="bg-white p-6 items-center rounded-lg ">
+           <img src = "img/concepts_POO.png" class="m-auto" />
+        </div>
     <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-blue-500">
             <h3 class="text-2xl font-bold mb-2">Organisation du Code</h3>
@@ -18,9 +22,13 @@
             <h3 class="text-2xl font-bold mb-2">Réutilisabilité</h3>
             <p class="text-gray-700">Une fois qu'un "moule" à objet (une classe) est créé, on peut l'utiliser pour fabriquer autant d'objets que l'on veut. On peut aussi créer de nouveaux moules basés sur les anciens, en héritant de leurs fonctionnalités sans avoir à tout réécrire.</p>
         </div>
+
+
     </div>
     <div class="text-right mt-8"> <a href="#page-top" class="text-sm font-semibold text-blue-600 hover:underline">↑ Retour en haut</a> </div>
 </section>
+
+
 
 <!-- ========== CHAPITRE 2 : LES CLASSES ET LES OBJETS ========== -->
 <section id="classes-objets" class="mb-16">
@@ -30,6 +38,18 @@
         <li><strong>La Classe :</strong> C'est le <strong>plan de construction</strong>, le moule. Elle définit la structure commune à tous les objets d'un certain type : les données qu'ils contiendront (les attributs) et les actions qu'ils pourront effectuer (les méthodes).</li>
         <li><strong>L'Objet :</strong> C'est une <strong>instance</strong> de la classe. C'est le produit fini, créé à partir du plan. Si `Voiture` est la classe, alors ma voiture bleue et votre voiture rouge sont deux objets distincts de la même classe.</li>
     </ul>
+   <h4 class="text-2xl font-semibold mb-3">Illustration 1</h4>
+ 
+    <div class="bg-white p-6 items-center rounded-lg ">
+           <img src = "img/class_objects.png" class="m-auto" />
+        </div>
+
+   <h4 class="text-2xl font-semibold mb-3">Illustration 2</h4>
+  <div class="bg-white p-6 items-center rounded-lg ">
+           <img src = "img/class_object.png" class="m-auto" />
+        </div>
+
+
     <div class="bg-white p-6 rounded-lg shadow-sm border">
         <h4 class="text-lg font-semibold text-gray-900 mb-2">2.1. Déclarer une classe et créer un objet</h4>
         <p class="text-gray-700 mb-4">En Python, on utilise le mot-clé `class` pour définir une classe. Par convention, les noms de classes commencent par une majuscule. Pour créer un objet (instancier la classe), on appelle la classe comme une fonction.</p>
@@ -55,6 +75,12 @@
 <section id="constructeur-attributs" class="mb-16">
     <h3 class="text-2xl font-semibold mb-3">Chapitre 3 : Le Constructeur et les Attributs d'instance</h3>
     <p class="text-gray-700 mb-6">Nos objets sont pour l'instant des coquilles vides. Pour qu'ils aient leurs propres données (un nom, une couleur, un âge...), nous devons définir des <strong>attributs d'instance</strong>. Cela se fait généralement dans une méthode spéciale appelée le <strong>constructeur</strong>.</p>
+    
+       <h4 class="text-2xl font-semibold mb-3">Illustration 3</h4>
+  <div class="bg-white p-6 items-center rounded-lg ">
+           <img src = "img/attributs_methodes.png" class="m-auto" />
+        </div>
+    
     <div class="space-y-8">
         <div class="bg-white p-6 rounded-lg shadow-sm border">
             <h4 class="text-xl font-bold text-gray-800 mb-2">3.1. La méthode `__init__` et le paramètre `self`</h4>
