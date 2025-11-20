@@ -7,7 +7,7 @@
 <section id="accueil" class="mb-16">
     <h3 class="text-2xl font-semibold mb-3">Chapitre 1 : Pourquoi la POO ? De la procédure à l'objet</h3>
     <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-        Jusqu'à présent, vous avez probablement programmé de manière <strong>procédurale</strong> : une suite d'instructions et de fonctions qui manipulent des données. Cette approche fonctionne bien pour des scripts simples, mais devient difficile à maintenir lorsque les programmes grandissent. La Programmation Orientée Objet (POO) propose une nouvelle façon de penser : au lieu de séparer les données des fonctions qui les traitent, on les regroupe dans des entités logiques appelées <strong>objets</strong>.
+        Jusqu'à présent, vous avez programmé de manière <strong>procédurale</strong> : une suite d'instructions et de fonctions qui manipulent des données. Cette approche fonctionne bien pour des scripts simples, mais devient difficile à maintenir lorsque les programmes grandissent. La Programmation Orientée Objet (POO) propose une nouvelle façon de penser : au lieu de séparer les données des fonctions qui les traitent, on les regroupe dans des entités logiques appelées <strong>objets</strong>.
     </p>
 
      <div class="bg-white p-6 items-center rounded-lg ">
