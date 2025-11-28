@@ -87,6 +87,14 @@
 </section>
 
 
+
+<!-- ========== TITRE EXAMEN ========== -->
+<div class="mt-16 mb-10 border-t-4 border-indigo-100 pt-10 text-center">
+    <span class="inline-block py-1 px-3 rounded-full bg-indigo-100 text-indigo-700 text-sm font-semibold tracking-wide uppercase mb-2">Évaluation Finale</span>
+    <h2 class="text-4xl font-extrabold text-gray-900">Examen Régional 2024/2025</h2>
+    <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">Mettez en pratique vos connaissances en Programmation Orientée Objet avec ces sujets d'examen.</p>
+</div>
+
 <!-- ========== EXAMEN 2025 : ÉTUDE DE CAS ========== -->
 <section id="examen-2025" class="mb-16">
     <h3 class="text-2xl font-semibold mb-3">Variante 1 : Système de gestion de notes pour une école (15 pts)</h3>
