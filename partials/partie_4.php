@@ -28,7 +28,15 @@
         <span class="py-builtin">self</span>.est_emprunte = <span class="py-builtin">False</span>
         
     <span class="py-keyword">def</span> <span class="py-function">__str__</span>(<span class="py-builtin">self</span>):
-        <span class="py-variable">statut</span> = <span class="py-string">"Emprunté"</span> <span class="py-keyword">if</span> <span class="py-builtin">self</span>.est_emprunte <span class="py-keyword">else</span> <span class="py-string">"Disponible"</span>
+    
+        <span class="py-comment"># utilisation de condition normale </span>
+        <span class="py-comment"># if self.est_emprunte:</span>
+            <span class="py-comment"># statut = "Emprunté"</span>
+        <span class="py-comment"># else:</span>
+            <span class="py-comment"># statut = "Disponible"</span>
+    
+        <span class="py-comment"># affectation conditionnelle au lieu de la condition if normale </span>
+        <span class="py-comment"># statut = "Emprunté" if self.est_emprunte else "Disponible"</span>
         <span class="py-keyword">return</span> <span class="py-string">f"'{<span class="py-builtin">self</span>.titre}' par {<span class="py-builtin">self</span>.auteur} - Statut : {<span class="py-variable">statut</span>}"</span>
 
 <span class="py-keyword">class</span> <span class="py-function">Bibliotheque</span>:
@@ -159,7 +167,10 @@
         """</span>
         <span class="py-keyword">if</span> <span class="py-keyword">not</span> <span class="py-builtin">self</span>.notes:
             <span class="py-keyword">return</span> 0.0
-        
+
+        <span class="py-comment"># solution élégante avec les listes des compréhensions</span>
+        <span class="py-comment"># return sum([note for note in self.notes.values()]) / len(self.notes)</span>
+
         <span class="py-comment"># Accumulation sans listes de compréhension</span>
         <span class="py-variable">somme_notes</span> = 0
         <span class="py-variable">nombre_notes</span> = 0
@@ -197,7 +208,12 @@
         """</span>
         <span class="py-keyword">if</span> <span class="py-keyword">not</span> <span class="py-builtin">self</span>.liste_etudiants:
             <span class="py-keyword">return</span> 0.0
-        
+        <span class="py-comment"># solution élégante avec les listes des compréhensions</span>
+        <span class="py-comment"># return sum([e.calculer_moyenne() for e in self.liste_etudiants]) / len(self.liste_etudiants)</span>
+ 
+
+
+
         <span class="py-comment"># Accumulation sans listes de compréhension</span>
         <span class="py-variable">somme_moyennes</span> = 0.0
         <span class="py-variable">nombre_etudiants</span> = 0
@@ -215,7 +231,9 @@
         <span class="py-keyword">if</span> <span class="py-keyword">not</span> <span class="py-builtin">self</span>.liste_etudiants:
             <span class="py-builtin">print</span>(<span class="py-string">f"La classe {<span class="py-builtin">self</span>.nom_classe} est vide."</span>)
             <span class="py-keyword">return</span> <span class="py-builtin">None</span>
-        
+
+        <span class="py-comment"># solution élégante avec les listes des compréhensions</span>
+        <span class="py-comment"># meilleur_etudiant = max(self.liste_etudiants, key=lambda e: e.calculer_moyenne())</span>
         <span class="py-variable">meilleur_etudiant</span> = <span class="py-builtin">None</span>
         <span class="py-variable">meilleure_moyenne</span> = -1 <span class="py-comment"># Initialisation à une valeur impossible</span>
 
@@ -372,7 +390,13 @@
         Retourne l'objet Produit s'il est trouvé, None sinon.
         """</span>
         <span class="py-variable">nom_recherche</span> = <span class="py-variable">nom</span>.<span class="py-function">lower</span>()
-        
+        <span class="py-comment">#  Liste de compréhension + next()</span>
+        <span class="py-comment"># produit = next(</span>
+        <span class="py-comment">#     (p for p in self.catalogue if p.nom.lower() == nom_recherche),</span>
+        <span class="py-comment">#     None</span>
+        <span class="py-comment"># )</span>
+
+
         <span class="py-comment"># Parcours du catalogue avec une boucle ordinaire</span>
         <span class="py-keyword">for</span> <span class="py-variable">produit</span> <span class="py-keyword">in</span> <span class="py-builtin">self</span>.catalogue:
             <span class="py-keyword">if</span> <span class="py-variable">produit</span>.nom.<span class="py-function">lower</span>() == <span class="py-variable">nom_recherche</span>:
@@ -390,6 +414,14 @@
         <span class="py-builtin">print</span>(<span class="py-string">f"\n======== RAPPORT DE STOCK POUR {<span class="py-builtin">self</span>.nom.<span class="py-function">upper</span>()} ========"</span>)
         <span class="py-builtin">print</span>(<span class="py-string">f"Localisation : {<span class="py-builtin">self</span>.adresse}"</span>)
         
+        <span class="py-comment"># Affichage direct avec une liste de compréhension (pour l’itération)</span>
+        <span class="py-comment">#[</span>
+        <span class="py-comment">#    print(f"* {p.nom.ljust(20)} | Quantité: {p.quantite_en_stock} | Prix: {p.prix:.2f}€")</span>
+        <span class="py-comment">#    for p in self.catalogue</span>
+        <span class="py-comment">#]</span>
+
+
+
         <span class="py-comment"># Variables pour le résumé (calculé avec une boucle)</span>
         <span class="py-variable">nombre_total_produits</span> = 0
         <span class="py-variable">valeur_totale_stock</span> = 0.0
